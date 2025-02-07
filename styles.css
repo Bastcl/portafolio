@@ -4,11 +4,72 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: whitesmoke;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 25px;
+    position: relative;
+    
+}
+
+.navbar-logo img {
+    height: 72px;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 15px;
+
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 2px 0;
+}
+
 .parrafo-cont {
     text-align: justify;
 }
 .contenido h2, .subtitulo-cont, .parrafo-cont {
-    margin: 30px 72px 30px 72px;
+    margin: 0px 72px 0px 72px;
+    padding-top: 10px;
+}
+h1 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: start;
+    margin: 72px;
     padding: 0;
 }
 h3 {
@@ -23,13 +84,7 @@ hr {
     border: 1px solid black;
     margin: 20px;
 }
-.titulos {
-background-color: black;
-color:whitesmoke;
-margin: 0;
-padding: 30px;
-text-align: center;
-}
+
 .footer {
     background-color: black;
     color: whitesmoke;
@@ -61,6 +116,33 @@ text-align: center;
     }
     .contenido h2, .subtitulo-cont, .parrafo-cont {
         margin: 20px 30px 30px 30px;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 128px; /* Ajusta según la altura del navbar */
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+        text-align: right;
+        padding-left: 20px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+    h1 {
+        margin: 30px;
     }
 }
 
